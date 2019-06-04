@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [04/Jun/2019:15:45:24 +0800] "GET /ssm_web HTTP/1.1" 302 - http-bio-8888-exec-2 0
+0:0:0:0:0:0:0:1 - - [04/Jun/2019:15:45:25 +0800] "GET /ssm_web/ HTTP/1.1" 200 2584 http-bio-8888-exec-3 1063
+0:0:0:0:0:0:0:1 - - [04/Jun/2019:15:45:25 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8888-exec-4 0
+0:0:0:0:0:0:0:1 - - [04/Jun/2019:15:45:37 +0800] "POST /ssm_web/user/login.do HTTP/1.1" 200 12760 http-bio-8888-exec-5 3248
