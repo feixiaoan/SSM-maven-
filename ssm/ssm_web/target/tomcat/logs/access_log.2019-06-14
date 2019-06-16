@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [14/Jun/2019:19:43:48 +0800] "GET /ssm_web HTTP/1.1" 302 - http-bio-8888-exec-2 0
+0:0:0:0:0:0:0:1 - - [14/Jun/2019:19:43:49 +0800] "GET /ssm_web/ HTTP/1.1" 200 2579 http-bio-8888-exec-3 173
+0:0:0:0:0:0:0:1 - - [14/Jun/2019:19:43:49 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8888-exec-4 0
+0:0:0:0:0:0:0:1 - - [14/Jun/2019:19:44:01 +0800] "GET /ssm_web/403.jsp HTTP/1.1" 302 - http-bio-8888-exec-5 32
+0:0:0:0:0:0:0:1 - - [14/Jun/2019:19:44:01 +0800] "GET /ssm_web/login.jsp HTTP/1.1" 200 2579 http-bio-8888-exec-7 5
+0:0:0:0:0:0:0:1 - - [14/Jun/2019:19:44:11 +0800] "POST /ssm_web/login.do HTTP/1.1" 200 12760 http-bio-8888-exec-8 959
+0:0:0:0:0:0:0:1 - - [14/Jun/2019:19:44:20 +0800] "GET /ssm_web/403.jsp HTTP/1.1" 200 4824 http-bio-8888-exec-9 857

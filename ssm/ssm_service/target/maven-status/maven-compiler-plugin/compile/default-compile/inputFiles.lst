@@ -1,10 +1,12 @@
 E:\ssm\ssm_service\src\main\java\com\xiaofei\ssm\service\IOrdersService.java
 E:\ssm\ssm_service\src\main\java\com\xiaofei\ssm\service\impl\UserServiceImpl.java
 E:\ssm\ssm_service\src\main\java\com\xiaofei\ssm\service\impl\OrdersServiceImpl.java
+E:\ssm\ssm_service\src\main\java\com\xiaofei\ssm\service\impl\SysLogServiceImpl.java
 E:\ssm\ssm_service\src\main\java\com\xiaofei\ssm\service\IUserService.java
 E:\ssm\ssm_service\src\main\java\com\xiaofei\ssm\service\IRoleService.java
 E:\ssm\ssm_service\src\main\java\com\xiaofei\ssm\service\IProductService.java
 E:\ssm\ssm_service\src\main\java\com\xiaofei\ssm\service\impl\PermissionServiceImpl.java
 E:\ssm\ssm_service\src\main\java\com\xiaofei\ssm\service\impl\ProductServiceImpl.java
+E:\ssm\ssm_service\src\main\java\com\xiaofei\ssm\service\ISysLogService.java
 E:\ssm\ssm_service\src\main\java\com\xiaofei\ssm\service\IPermissionService.java
 E:\ssm\ssm_service\src\main\java\com\xiaofei\ssm\service\impl\RoleServiceImpl.java

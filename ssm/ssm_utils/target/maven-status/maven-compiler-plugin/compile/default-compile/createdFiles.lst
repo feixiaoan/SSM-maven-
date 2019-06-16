@@ -1,1 +1,2 @@
 com\xiaofei\ssm\utils\DateUtils.class
+com\xiaofei\ssm\utils\BCryptPasswordEncoderUtils.class

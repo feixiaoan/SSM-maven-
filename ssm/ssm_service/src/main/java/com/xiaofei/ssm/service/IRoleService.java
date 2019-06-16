@@ -1,5 +1,6 @@
 package com.xiaofei.ssm.service;
 
+import com.xiaofei.ssm.domain.Permission;
 import com.xiaofei.ssm.domain.Role;
 
 import java.util.List;
@@ -10,6 +11,14 @@ import java.util.List;
  * @date 2019/06/03
  */
 public interface IRoleService {
+    /**
+     * 根据id查询角色
+     * @param roleId
+     * @return
+     * @throws Exception
+     */
+     Role findById(String roleId) throws Exception;
+
     /**
      * 查询所有的角色
      * @return
@@ -23,4 +32,20 @@ public interface IRoleService {
      * @throws Exception
      */
     void save(Role role) throws Exception;
+
+    /**
+     * 根据roleId查询其他权限
+     * @param roleId
+     * @return
+     * @throws Exception
+     */
+    List<Permission> findOtherPermissions(String roleId) throws Exception;
+
+    /**
+     * 给角色添加权限
+     * @param roleId
+     * @param permissionIds
+     * @throws Exception
+     */
+    void addPermissionToRole(String roleId, String[] permissionIds) throws Exception;
 }

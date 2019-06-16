@@ -1,5 +1,6 @@
 package com.xiaofei.ssm.controller;
 
+import com.xiaofei.ssm.domain.Role;
 import com.xiaofei.ssm.domain.UserInfo;
 import com.xiaofei.ssm.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,37 @@ public class UsersController {
     private IUserService userService;
 
     /**
+     * 给用户添加角色
+     * @param userId
+     * @param roleIds
+     * @return
+     */
+    @RequestMapping("/addRoleToUser.do")
+    public String addRoleToUser(@RequestParam(value = "userId",required = true) String userId,
+                                @RequestParam(value = "ids",required = true) String[] roleIds) throws Exception {
+        userService.addRoleToUser(userId,roleIds);
+        return "redirect:findAll.do";
+    }
+
+    /**
+     * 查询用户以及给用户添加角色
+     * @param userId
+     * @return
+     */
+    @RequestMapping("/findUserByIdAndAllRole.do")
+    public ModelAndView findUserByIdAndAllRole(@RequestParam(name = "id",required = true) String userId) throws Exception {
+        ModelAndView mv = new ModelAndView();
+        //1.根据用户的id查询用户
+        UserInfo userInfo = userService.findById(userId);
+        //2.根据用户id查询可以添加的角色
+        List<Role> list = userService.findOthersRole(userId);
+        mv.addObject("user",userInfo);
+        mv.addObject("roleList",list);
+        mv.setViewName("user-role-add");
+        return mv;
+    }
+
+    /**
      * 登录验证
      * @param userName
      * @param password
@@ -43,7 +75,7 @@ public class UsersController {
     }
 
     /**
-     * 保存用户信息
+     * 添加用户信息
      * @param user
      * @return
      * @throws Exception

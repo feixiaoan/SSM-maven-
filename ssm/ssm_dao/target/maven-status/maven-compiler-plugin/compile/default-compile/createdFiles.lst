@@ -1,6 +1,7 @@
 com\xiaofei\ssm\dao\IOrdersDao.class
 com\xiaofei\ssm\dao\IPermissionDao.class
 com\xiaofei\ssm\dao\IMemberDao.class
+com\xiaofei\ssm\dao\ISysLogDao.class
 com\xiaofei\ssm\dao\IRoleDao.class
 com\xiaofei\ssm\dao\IUserDao.class
 com\xiaofei\ssm\dao\IProductDao.class

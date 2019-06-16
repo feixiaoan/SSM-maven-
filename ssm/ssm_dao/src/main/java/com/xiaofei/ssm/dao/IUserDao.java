@@ -1,5 +1,6 @@
 package com.xiaofei.ssm.dao;
 
+import com.xiaofei.ssm.domain.Role;
 import com.xiaofei.ssm.domain.UserInfo;
 import org.apache.ibatis.annotations.*;
 
@@ -60,4 +61,40 @@ public interface IUserDao {
     @Select("select * from users where userName = #{userName} and password = #{password}")
     UserInfo login(@Param("userName") String userName,
                    @Param("password") String password) throws Exception;
+
+    /**
+     *根据姓名查询用户信息
+     * @param userName
+     * @return
+     * @throws Exception
+     */
+    @Select("select * from users where userName = #{userName}")
+    @Results({
+            @Result(id = true,property = "id", column = "id"),
+            @Result(id = true,property = "userName", column = "userName"),
+            @Result(id = true,property = "email", column = "email"),
+            @Result(id = true,property = "password", column = "password"),
+            @Result(id = true,property = "phoneNum", column = "phoneNum"),
+            @Result(id = true,property = "status", column = "status"),
+            @Result(property = "roles",column = "id",javaType = java.util.List.class,
+                    many = @Many(select = "com.xiaofei.ssm.dao.IRoleDao.findRoleById"))
+    })
+    UserInfo findByUsername(String userName) throws Exception;
+
+    /**
+     * 根据userId查询没有的角色
+     * @param userId
+     * @return
+     */
+    @Select("select * from role where id not in (select roleId from users_role where userId = #{userId})")
+    List<Role> findOthersRole(String userId);
+
+    /**
+     * 给用户添加角色
+     * @param userId
+     * @param roleId
+     * @throws Exception
+     */
+    @Insert("insert into users_role(userId,roleId) values(#{userId},#{roleId})")
+    void addRoleToUser(@Param("userId") String userId, @Param("roleId") String roleId) throws Exception;
 }

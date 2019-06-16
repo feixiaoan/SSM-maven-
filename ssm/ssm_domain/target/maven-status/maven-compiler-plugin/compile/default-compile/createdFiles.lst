@@ -5,3 +5,4 @@ com\xiaofei\ssm\domain\Role.class
 com\xiaofei\ssm\domain\Orders.class
 com\xiaofei\ssm\domain\Traveller.class
 com\xiaofei\ssm\domain\Member.class
+com\xiaofei\ssm\domain\SysLog.class

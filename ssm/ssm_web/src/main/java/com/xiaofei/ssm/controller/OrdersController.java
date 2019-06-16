@@ -48,8 +48,8 @@ public class OrdersController {
      * @throws Exception
      */
     @RequestMapping("/findAll.do")
-    public ModelAndView findAll(@RequestParam(name = "page", required = true,defaultValue = "1") int page,
-                                @RequestParam(name = "size", required = true,defaultValue = "4") int pageSize) throws Exception {
+    public ModelAndView findAll(@RequestParam(name = "page", required = true,defaultValue = "1") Integer page,
+                                @RequestParam(name = "size", required = true,defaultValue = "4") Integer pageSize) throws Exception {
         ModelAndView mv = new ModelAndView();
         List<Orders> ordersList = ordersService.findAll(page,pageSize);
         //利用PageHelper分页工具进行分页

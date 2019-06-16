@@ -1,3 +1,4 @@
+com\xiaofei\ssm\service\impl\SysLogServiceImpl.class
 com\xiaofei\ssm\service\IRoleService.class
 com\xiaofei\ssm\service\IUserService.class
 com\xiaofei\ssm\service\IProductService.class
@@ -8,3 +9,4 @@ com\xiaofei\ssm\service\impl\PermissionServiceImpl.class
 com\xiaofei\ssm\service\impl\ProductServiceImpl.class
 com\xiaofei\ssm\service\impl\OrdersServiceImpl.class
 com\xiaofei\ssm\service\impl\RoleServiceImpl.class
+com\xiaofei\ssm\service\ISysLogService.class

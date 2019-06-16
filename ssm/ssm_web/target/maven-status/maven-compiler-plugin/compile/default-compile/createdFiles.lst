@@ -3,3 +3,5 @@ com\xiaofei\ssm\controller\PermissionController.class
 com\xiaofei\ssm\controller\RoleController.class
 com\xiaofei\ssm\controller\OrdersController.class
 com\xiaofei\ssm\controller\ProductController.class
+com\xiaofei\ssm\controller\SysLogController.class
+com\xiaofei\ssm\controller\LogAop.class
